@@ -1,106 +1,540 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-service="Soul Worker">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="favicon" href="android-icon-48x48.png">
+	
+  <title>소울워커 세기말 액션 RPG</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets.playnccdn.com/uikit/cnb/v3/css/nc-cnbaa90.css?v=202211231722" />
+    <link rel="stylesheet" href="/assets.playnccdn.com/aion-web/v1/css/style.css" />
+    <link rel="stylesheet" href="../assets.playnccdn.com/aion-web/v1/css/main9800.css?v=202212141055" />    
+	<link rel="stylesheet" href="../assets.playnccdn.com/uikit/ncui/1.7.4/css/ncui-footer9800.css?v=202212141055">
+
+    <!-- meta -->
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <!-- Mobile -->
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport"
+		  content="user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, initial-scale=1.0"/>
+      <meta name="description" content="시즌2로 돌아온 소울워커!">
+      <meta name="keywords" content="소울워커 - 세기말 액션 RPG">
+	<meta property="og:type" content="website" />
+	<meta name="keywords" content="소울워커">
+	<meta name="keywords" content="던만추">
+	<meta name="keywords" content="던전에서만남을추구하면안돼는걸까">
+	<meta name="keywords" content="KR Soul Worker">
+	<meta name="keywords" content="소울워커">
+	<meta name="keywords" content="소드워커">
+	<meta name="keywords" content="소울">
+    <link href="img/favicon.ico" rel="shortcut icon"/>
+    <link href="img/favicon.ico" rel="shortcut icon"/>
     
- <!--               윤레이나의 소울워커 웹사이트 개발                     -->
+	<!-- JS -->
+	<script src="../assets.playnccdn.com/aion-web/v1/js/bluebird.min.js"></script>
+	<script src="../assets.playnccdn.com/common/js/lib/jquery-3.1.0.min.js"></script>
+	
+	<!-- 다크모드 -->
+	<script>
+		var _isDarkmode = "false";
+	</script>
+	<script src="../assets.playnccdn.com/uikit/uikit-dark-mode/js/ui.dark-mode9800.js?v=202212141055"></script>
+	<script>
+		// darkmode
+		new window._ui.darkmode();
+	</script>
+	<!-- // 다크모드 -->
+	<!-- IE 리다이렉트 -->
+	<script>
+		if(navigator.userAgent.indexOf('MSIE') > -1 || navigator.userAgent.indexOf('Trident') > -1){
+			/* https://assets.playnccdn.com = asset 도메인 */
+			location.href = "https://assets.playnccdn.com" + '/support/not-supported-ie/html/index.html?lang='+ document.documentElement.getAttribute('lang');
+		}
+	</script>
+	<!-- // IE 리다이렉트 -->
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+			'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+		});
+		var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+		j.async = true;
+		j.src =
+				'../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-N52PXK5');</script>
+	<!-- End Google Tag Manager -->
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+		w[l] = w[l] || [];
+		w[l].push({
+			'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+		});
+		var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+		j.async = true;
+		j.src =
+				'../www.googletagmanager.com/gtm5445.html?id=' + i + dl;
+		f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-TB72J98');</script>
+	<!-- End Google Tag Manager -->
 
-c
- 
-    <title>Soul Flex</title> 
 </head>
-<body>
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="/soul flex.png" alt="">
-                </span>
+<body class="pc UNKNOWN page-main">    
+	<div id="nc-cnb" class="aion_cnb"></div>
 
-                <div class="text logo-text">
-                    <span class="name">Soul Flex</span>
-                    <span class="profession">소울워커 팬 사이트</span>
+    
+	<form name="FrmGNBLogout" id="FrmGNBLogout" action="https://loginapi.plaync.com/login/logout" method="post">
+		<input type="hidden" name="return_url" value="" />
+	</form>
+	<script type="text/javascript">
+		var _serviceEnv = "LIVE";
+		function GNBLogout() {
+			var frm = document.getElementById("FrmGNBLogout");
+			frm.submit();
+		}
+		$("form[name='FrmGNBLogout'] input[name='return_url']").val(document.location.href);
+	</script>
+	<script src="../assets.playnccdn.com/uikit/cnb/v3/js/cnbaa90.js?v=202211231722"></script>
+	<script>
+		var isPC = true;
+		var isLauncher = false;
+		var _aionPath = 'index.html';
+	</script>
+	<script src="../assets.playnccdn.com/aion-web/v1/js/cnb-support/cnb-supportaa90.js?v=202211231722"></script> <!-- 캐릭터설정 -->
+	<script src="../assets.playnccdn.com/aion-web/v1/js/common/cnb.configaa90.js?v=202211231722"></script>
+	<script>
+		// cnb 시작 함수를 실행
+		window.cnb && window.cnb.start( cnbConfig );
+	</script>
+    <script src="../assets.playnccdn.com/vendor/slick/v1.6.0/slick.min.js"></script>
+    <div class="section_contents full main">
+        <!-- 상단 인터렉션 배너영역 -->   
+<section class="section_main_banner full">
+  <ul class="banner_list">
+    <li class="list_item" style="background-image: url('/img/배너1.png')">
+      <a href="https://game.naver.com/lounge/soulworker/board/detail/1198441">
+        <div class="img_object" style="background-image: url('/실루엣.png')"><span class="blind">캐릭터이미지</span></div>
+        <div class="layer_dimmed"></div>
+        <div class="text_area">
+            
+              <div class="label classic-world">NEW</div>
+                    
+          <div class="title">신규 레이드 바일 프레데터</div>
+          <div class="desc">소울워커 시작해서 12인 레이드 도전하기!</div>
+          <div class="date">2022 . 12 . 21 . (수)</div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="list_item" style="background-image: url('/bg1.jpg')">
+      <a href="/soul worker/guide/home.html">
+        <div class="img_object" style="background-image: url('/adad-removebg-preview.png')"><span class="blind">캐릭터이미지</span></div>
+        <div class="layer_dimmed"></div>
+        <div class="text_area">
+          
+              <div class="label live-world">가이드</div>
+          <div class="title">신규/복귀 워커님의 길잡이!</div>
+          <div class="desc">소울워커 어렵지 않습니다.</div>
+          <div class="date"></div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="list_item" style="background-image: url('/배경222.png')">
+      <a href="https://forms.gle/HQvu82koDvAVQFPZ7">
+        <div class="img_object" style="background-image: url('/새하-removebg-preview.png')"><span class="blind">캐릭터이미지</span></div>
+        <div class="layer_dimmed"></div>
+        <div class="text_area">
+          
+              <div class="label classic-world">CM새하이벤트</div>
+          
+          <div class="label">공지</div>
+          
+          <div class="title">소울워커의 CM새하 </div>
+          <div class="desc">저의 릴리 닉네임을 워커님들이 정해주세요!</div>
+          <div class="date"></div>
+        </div>
+      </a>
+    </li>
+
+    <li class="list_item" style="background-image: url('/팬아트.png')">
+      <a href="https://game.naver.com/lounge/soulworker/board/detail/1158297">
+        <div class="img_object" style="background-image: url('/치이걸즈.png')"><span class="blind">캐릭터이미지</span></div>
+        <div class="layer_dimmed"></div>
+        <div class="text_area">
+          
+            
+              <div class="label classic-world">이벤트</div>
+          
+          <div class="title">연말맞이 2022 소울워커 팬아트 이벤트를 개최합니다.</div>
+          <div class="desc">올 한해, 소울워커를 즐겨주셨던 워커님들의 추억을 그려주세요!</div>
+          <div class="date"></div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="list_item" style="background-image: url('/캡처.PNG')">
+      <a href="https://www.gururang.com/ko/store/soulworker">
+        <div class="img_object" style="background-image: url('/FSuhilLUcAAx8D5-removebg-preview.png')"><span class="blind">캐릭터이미지</span></div>
+        <div class="layer_dimmed"></div>
+        <div class="text_area">
+          
+              <div class="label live-world">굿즈</div>
+            
+          <div class="title">소울워커 굿즈샵 </div>
+          <div class="desc">각종 굿즈를 구경 해보세요!</div>
+          <div class="date"></div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="list_item" style="background-image: url('https://imgfiles-cdn.plaync.com/file/contents/download/20221213164155-kDtOfYQOpK4noPB69KgW0-v4')">
+      <a href="https://game.naver.com/lounge/soulworker/home">
+        <div class="img_object" style="background-image: url('/dada-removebg-preview.png')"><span class="blind">캐릭터이미지</span></div>
+        <div class="layer_dimmed"></div>
+        <div class="text_area">
+                
+              <div class="label classic-world">네이버 라운지</div>
+              
+          <div class="title">소울워커 공식 네이버 라운지</div>
+          <div class="desc">이곳에서 각종 개발자 노트 등 공지사항이 업데이트 되요!</div>
+          <div class="date"></div>
+        </div>
+      </a>
+    </li>
+    
+    <li class="list_item" style="background-image: url('https://imgfiles-cdn.plaync.com/file/contents/download/20221207093520-Nr9Z740GL7JqnjkqduMN0-v4')">
+      <a href="https://liongames.zendesk.com/hc/ko-kr/requests/new">
+        <div class="img_object" style="background-image: url('/162b0938ac512f494-removebg-preview.png')"><span class="blind">캐릭터이미지</span></div>
+        <div class="layer_dimmed"></div>
+        <div class="text_area">
+              <div class="label live-world">STEAM</div>
+          <div class="title">워커님의 소중한 의견을 듣고 있어요!</div>
+          <div class="desc">각종 건의사항 문의사항을 보내주세요</div>
+          <div class="date"></div>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <ul class="banner_nav_list" style="visibility:hidden;">
+    
+    <li class="list_item">
+      <div class="title">신규 레이드</div>
+    </li>
+    
+    <li class="list_item">
+      <div class="title">신규/복귀 가이드</div>
+    </li>
+    
+    <li class="list_item">
+      <div class="title">CM새하</div>
+    </li>
+    
+    <li class="list_item">
+      <div class="title">팬아트/이벤트</div>
+    </li>
+    
+    <li class="list_item">
+      <div class="title">굿즈샵(구루랑)</div>
+    </li>
+    
+    <li class="list_item">
+      <div class="title">라운지</div>
+    </li>
+    
+    <li class="list_item">
+      <div class="title">1:1문의센터</div>
+    </li>  
+  </ul>
+  <a href="javascript:void(0);" class="btn_item btn_prev"><span class="blind">이전</span></a>
+  <a href="javascript:void(0);" class="btn_item btn_next"><span class="blind">다음</span></a>
+  <div class="count_wrap"><em>1</em>/</div>
+  <a href="javascript:void(0);" class="btn_viewall">펼치기</a>
+  <div class="promotion_layer" style="display:none;">
+    <ul class="promotion_list">
+      
+      <li class="list_item">
+        <a href="https://game.naver.com/lounge/soulworker/board/detail/1198441">
+          <img src="/실루엣.png" width="56" height="56" alt=""/>
+          <div class="text_area">
+            <div class="title">신규레이드</div>
+            <div class="date">2022. 12. 21. (수)</div>
+          </div>
+        </a>
+      </li>
+      <li class="list_item">
+        <a href="/soul worker/guide/home.html">
+          <img src="/img/다나.jpg" width="56" height="56" alt=""/>
+          <div class="text_area">
+            <div class="title">신규유저가이드</div>
+            <div class="date"></div>
+          </div>
+        </a>
+      </li>
+      <li class="list_item">
+        <a href="/soul worker/guide/home.html">
+          <img src="/새하-removebg-preview.png" width="56" height="56" alt=""/>
+          <div class="text_area">
+            <div class="title">CM새하</div>
+            <div class="date">2022 . 12 . 26 . (월)까지</div>
+          </div>
+        </a>
+      </li>
+      
+    </ul>
+    <a href="javascript:void(0);" class="btn_viewall_close">X 닫기<span class="blind">프로모션 모아보기 닫기</span></a>
+  </div>
+</section>
+               <!-- 메뉴 & 공지 영역-->
+        <section class="section_main_top">
+            <div class="shortcut_area">
+                <ul class="shortcut_list">
+  <li class="list_item  ">
+  </li>
+  <li class="list_item only-pc ">
+  </li>
+  <li class="list_item  ">
+    <li class="list_item only-pc ">
+    </li>    
+      <a href="https://www.youtube.com/@SoulWorkerLIONGAMES"><span class="icon" style="background-image: url('/img/다나.jpg')"></span>공식유튜브</a>
+  </li>
+  <li class="list_item only-pc ">
+      <a href="https://arca.live/b/soulworkers"><span class="icon" style="background-image: url('/다운로드-removebg-preview.png')"></span>아카라이브</a>
+  </li>
+  <li class="list_item only-pc ">
+    
+      <a href="https://gall.dcinside.com/board/lists/?id=soulworker"><span class="icon" style="background-image: url('/dd-removebg-preview.png')"></span>DC인사이드</a>
+    
+  </li>
+  
+  <li class="list_item only-pc ">
+    
+      <a href="https://liongames.zendesk.com/hc/ko-kr/requests/new"><span class="icon" style="background-image: url('/images-removebg-preview.png')"></span>고객지원</a>
+  </li>
+  <li class="list_item only-pc ">
+  
+  <li class="list_item  only-mobile">
+    
+      <a href="https://liongames.zendesk.com/hc/ko-kr/requests/new"><span class="icon" style="background-image: url('https://imgfiles-cdn.plaync.com/file/contents/download/20181012095901-ABEV3UdJ1kOqhTmTaxKR0-v4')"></span>1:1문의</a>
+    
+  </li>
+  
+  <li class="list_item  only-mobile">
+    
+      <a href="https://game.naver.com/lounge/soulworker/board/24"><span class="icon" style="background-image: url('https://imgfiles-cdn.plaync.com/file/contents/download/20191120101929-ved4m1IZWlD16SFCAiHk0-v4')"></span>개발자 노트</a>
+    
+  </li>
+  
+  <li class="list_item  only-mobile">
+    
+      <a href="https://game.naver.com/lounge/soulworker/board/4"><span class="icon" style="background-image: url('https://imgfiles-cdn.plaync.com/file/contents/download/20181012095911-fefXL5hg5XfgioVqVYhs0-v4')"></span>커뮤니티</a>
+    
+  </li>
+  <a href="steam://run/1825750" class="myButton">게임시작</a>
+</ul>
+            </div>
+            <div class="notice_area">
+                <h3 class="title">새소식</h3>
+                <a href="https://game.naver.com/lounge/soulworker/board/detail/426679" class="link_more"><span class="blind">공지 게시판으로 이동</span></a>
+                <div class="notice_list">
+  
+  <div class="list_item">
+    <div class="list_inner">
+      
+      <span class="new"></span>
+      
+      <a href="https://game.naver.com/lounge/soulworker/board/detail/1227821" class="list_link">
+        [안내] (수정) 12월 7일(수) 업데이트 노트 안내
+      </a>       
+    </div>
+  </div>
+
+  <div class="list_item">
+    <div class="list_inner">
+      <span class="new"></span>
+      <a href="https://game.naver.com/lounge/soulworker/board/detail/1267578" class="list_link">
+        [안내] 사전 이관 신청 종료 안내
+      </a>       
+    </div>
+  </div>
+  <div class="list_item">
+    <div class="list_inner">
+      <span class="new"></span>
+      <a href="https://game.naver.com/lounge/soulworker/board/detail/1198441" class="list_link">
+        [안내] 12월 개발자 노트
+      </a>       
+    </div>
+  </div>
+  <div class="list_item">
+    <div class="list_inner">
+      <span class="new"></span>
+      <a href="https://game.naver.com/lounge/soulworker/board/detail/1004213" class="list_link">
+        [홈페이지 ] 신규 가이드 업데이트
+      </a>       
+    </div>
+  </div>
+</div>   
+        </section>
+        <!--사이드 영역-->
+        <section class="section_main_personal">
+          <div class="section_item">
+            <h3 class="section_title section_membership_title">가이드 & 동영상<em></em></h3>
+            <iframe class="youtube" width="420" height="315"
+            src="https://www.youtube.com/embed/EI-dWv43RhQ">
+            </iframe>            
+            <span>    <iframe class="youtube2" width="420" height="315"
+            src="https://www.youtube.com/embed/5VthHYkR5es">
+            </iframe>                        
+           <span></span>   
+        </section>
+        
+        <section class="section_main_personal">
+            <!-- 가이드 영역  -->
+            <div class="section_item">
+                <div class="membership_area">           
+                    <div class="reward_wrap" data-content="classic">
+                        <ul class="reward_list"></ul>
+                        <div class="desc with_button align_center"></div>
+                        
+                        <div class="btn_link_wrap"><a href="https://aionnshop.plaync.com/aionc/goods/list?dci=217" class="btn_link">자세히 보기 &gt;</a></div>
+                    </div>                   
                 </div>
             </div>
-
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-
-                <li class="search-box">
-                </li>
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="/index2.html">
-                            <i class='bx bx-home-alt icon' ></i>
-                            <span class="text nav-text">홈</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
-                            <span class="text nav-text">빙고[준비중]</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="/app.html">
-                            <i class='bx bx-bell icon'></i>
-                            <span class="text nav-text">모아보기app</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="https://game.naver.com/lounge/soulworker/board/detail/1199007">
-                            <i class='bx bx-pie-chart-alt icon' ></i>
-                            <span class="text nav-text">이벤트</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="https://game.naver.com/lounge/soulworker/home">
-                            <i class='bx bx-heart icon' ></i>
-                            <span class="text nav-text">네이버 라운지</span>
-                        </a>
-                    </li>
-
-                </ul>
+            <!-- 소울워커 가이드 영역 -->
+            <div class="section_item">
+                <h3 class="section_title">소울워커 가이드</h3>
+                <div class="inform_wrap">
+                    <div class="text">신규/복귀를 위한 <br>가이드가 모두 모여 있습니다.</div>
+                    <div class="btn_link_wrap"><a href="/soul worker/guide/home.html" class="btn_link">신규 가이드&gt;</a></div>
+                </div>
             </div>
-
-            <div class="bottom-content">
-                <li class="">
-                    <a href="">
-                        <i class='' ></i>
-                        <span class="text nav-text">Soul Flex</span>
-                    </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">다크모드</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-                
+            <div class="section_item">
+                <h3 class="section_title">홈페이지 개발진</h3>
+                <div class="inform_wrap">
+                    <div class="text">윤레이나ruy<br>fndn987@naver.com  | 01068998342</div>
+                </div>
             </div>
+        </section>
+        <section id="nctvTheme"></section>
+        <div class="section_contents_admin"></div>
+  
+    </div>	
+	<footer id="footer" class="wrap-footer"></footer>
+    <!-- Footer -->
+    <script src="../assets.playnccdn.com/search/livekwd/livekeyword_aionaff2.js?time=202212181900"></script>
+    <script src="../assets.playnccdn.com/common/js/uikit/modal/ModalPopupRWD9800.js?v=202212141055"></script>
+    <script src="../assets.playnccdn.com/aion-web/v1/js/main/main9800.js?v=202212141055"></script>
+    <script>
+        (function ($) {
+            // 상단 프로모션 배너
+            var bannerData = JSON.parse("{\"display\":true,\"groups\":[{\"showWorldLabel\":true,\"showLabel\":false,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214095041-XvD0jMKGukjVUZIJlBpE0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214095043-2pUYuPwvfEVCSdzSpz4e0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214095038-F7CUP6vkqgyVNQqL9s4h0-v4\"},\"worldLabel\":\"classic-world\",\"title\":\"\uC774\uACC4\uC758 \uC774\uBCA4\uD2B8 \uD328\uC2A4\",\"description\":\"\uB1CC\uB8E1\uC655\uC758 \uBB34\uAE30\uC640 \uD568\uAED8 \uCC3E\uC544\uC628 \uC774\uACC4\uC758 \uC288\uACE0!\",\"date\":\"2022. 12. 14. (\uC218) ~ 2023. 1. 4. (\uC218)\",\"link\":\"https:\/\/aion.plaync.com\/board\/clsnotice\/view?articleId=50143550\"},{\"showWorldLabel\":true,\"showLabel\":false,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214095052-W8OAb8lbslvg97kpspXu0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214095054-aUxjgYW24FrNvP9WzEFd0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214095056-Yg5iKVyvBHHVlk66WXo90-v4\"},\"worldLabel\":\"live-world\",\"title\":\"\uB77C\uC774\uBE0C \uB370\uBC14\uD328\uC2A4\",\"description\":\"\uB370\uBC14\uC758 \uC544\uD2B8\uB808\uC774\uC544 \uAE38\uC7A1\uC774\",\"date\":\"2022. 12. 14. (\uC218) ~ 2023. 1. 11. (\uC218)\",\"link\":\"https:\/\/aion.plaync.com\/board\/notice\/view?articleId=50143549\"},{\"showWorldLabel\":true,\"showLabel\":true,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214094123-noYLVCHqXqBlQFLpH0h30-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214094125-xBm2MasmWfQRCYEl8WzY0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214094127-h5x6v6e3uZQH4BZKA1570-v4\"},\"worldLabel\":\"classic-world\",\"label\":\"EVENT\",\"title\":\"\uC2DC\uC791\uD55C\uB2E4\uBA74 \uD1B5\uD569 \uC2E0\uC11C\uBC84\uC5D0\uC11C\",\"description\":\"\uD65C\uB825\uC774 \uB118\uCE58\uB294 \uD1B5\uD569 \uC2E0\uC11C\uBC84\uC5D0\uC11C \uC0C8\uB86D\uAC8C \uC2DC\uC791\uD558\uC138\uC694!\",\"date\":\"2022. 12. 14. (\uC218) ~ 2023. 1. 18. (\uC218)\",\"link\":\"https:\/\/aion.plaync.com\/board\/clsnotice\/view?articleId=50143545\"},{\"showWorldLabel\":true,\"showLabel\":true,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214100146-KuzZxL1oyXgLa2QeLzKZ0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214100148-jY0jNqjrRQlxCMKMKuBQ0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214100144-QJ1xRvc5quSBwftKXeGN0-v4\"},\"worldLabel\":\"classic-world\",\"label\":\"EVENT\",\"title\":\"\uD06C\uB9AC\uC2A4\uB9C8\uC2A4 \uB300\uCD95\uC81C PART I\",\"date\":\"2022. 12. 14. (\uC218) ~ 2023. 1. 4. (\uC218)\",\"description\":\"\uCD94\uC6B4 \uACA8\uC6B8! \uD06C\uB9AC\uC2A4\uB9C8\uC2A4 \uC120\uBB3C\uACFC \uD48D\uC131\uD55C \uD61C\uD0DD\uC73C\uB85C \uD589\uBCF5\uD55C \uC2DC\uAC04\uC744 \uC990\uACA8\uBCF4\uC138\uC694\",\"link\":\"https:\/\/aion.plaync.com\/board\/clsnotice\/view?articleId=50143320\"},{\"showWorldLabel\":true,\"showLabel\":true,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214102722-P037QikGl91nqGEyrNsv0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214102723-w5Gtgyaq94bAXEQVZOBa0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221214102719-WJJeqNlKVA9GEdrIKHTs0-v4\"},\"worldLabel\":\"live-world\",\"title\":\"\uCCAB\uBC88\uC9F8 \uD06C\uB9AC\uC2A4\uB9C8\uC2A4 \uB300\uCD95\uC81C\",\"description\":\"\uD2B9\uBCC4\uD55C \uC120\uBB3C\uACFC \uD568\uAED8 \uC544\uD504\uC0AC\uB780\uD0C0\uC5D0 \uCC3E\uC544\uC62C \uD06C\uB9AC\uC2A4\uB9C8\uC2A4\uB97C \uAE30\uB2E4\uB824\uC694!\",\"date\":\"2022. 12. 14. (\uC218) ~ 2023. 1. 4. (\uC218)\",\"link\":\"index.html\/\/aion.plaync.com\/board\/notice\/view?articleId=50143323\",\"label\":\"EVENT\"},{\"showWorldLabel\":true,\"showLabel\":false,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221213164155-kDtOfYQOpK4noPB69KgW0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221213164152-OW3B2nL2Dn69fHU4f4r20-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221213164149-XGIUwQLiTUtLk0mQLd4g0-v4\"},\"worldLabel\":\"classic-world\",\"title\":\"\uD074\uB798\uC2DD \uAC1C\uBC1C\uC790 \uB178\uD2B8\",\"description\":\"12\uC6D4 21\uC77C \uC5C5\uB370\uC774\uD2B8 \uC608\uC815 \uC0AC\uD56D \uC548\uB0B4\",\"date\":\"2022. 12. 13.(\uD654)\",\"link\":\"https:\/\/aion.plaync.com\/board\/developers\/view?articleId=50143514\"},{\"showWorldLabel\":true,\"showLabel\":false,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093520-Nr9Z740GL7JqnjkqduMN0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093523-Xe02RRu9EnKgNlM9uXov0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093524-jRp2YfL8MKsdYw93bjKm0-v4\"},\"worldLabel\":\"live-world\",\"title\":\"\uACA8\uC6B8\uB9DE\uC774 \uBCC0\uC2E0 \uB3C4\uC804 \uD328\uD0A4\uC9C0\",\"description\":\"\uC720\uC2A4\uD2F0\uC5D8\/\uB8E8\uBBF8\uC5D8 \uAD81\uADF9 \uBCC0\uC2E0\uC744 \uB9CC\uB098\uBCFC \uC218 \uC788\uC5B4\uC694!\",\"date\":\"2022. 12. 7.(\uC218) ~ 12. 28.(\uC218)\",\"link\":\"https:\/\/aion.plaync.com\/board\/notice\/view?articleId=50135202\"},{\"showWorldLabel\":true,\"showLabel\":false,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093426-9CPD0wEmdJWMspawUhcr0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093427-4YD1HgY4dTI9RKxkPN3D0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093429-XcdCKBKGEATIlqpagbfL0-v4\"},\"title\":\"\uD074\uB798\uC2DD \uB370\uBC14\uD328\uC2A4\",\"date\":\"2022. 12. 7.(\uC218) ~ 2023. 1. 4.(\uC218)\",\"link\":\"index.html\/\/aion.plaync.com\/board\/clsnotice\/view?articleId=50135204\",\"description\":\"\uB370\uBC14\uC758 \uC544\uD2B8\uB808\uC774\uC544 \uAE38\uC7A1\uC774\",\"worldLabel\":\"classic-world\"},{\"showWorldLabel\":true,\"showLabel\":true,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093707-OWPs4j6DlI8UfyS8QhKD0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093705-Y3aAd4G2vIFwH5ehAjtg0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093703-r5ro9yV2VUW4mdtnZaD70-v4\"},\"worldLabel\":\"classic-world\",\"label\":\"EVENT\",\"title\":\"\uD3ED\uC8FC\uD55C \uB9CC\uD22C\uD22C\uB97C \uC81C\uC555\uD558\uB77C!\",\"description\":\"\uC6A9\uACC4\uC5D0 \uB4F1\uC7A5\uD55C \uB9CC\uD22C\uD22C\uB97C \uCC98\uCE58\uD558\uACE0 \uD2B9\uBCC4\uD55C \uBCF4\uC0C1\uC744 \uD68D\uB4DD\uD558\uC138\uC694!\",\"date\":\"2022. 12. 7.(\uC218) ~ 12. 21.(\uC218)\",\"link\":\"https:\/\/aion.plaync.com\/board\/clsnotice\/view?articleId=50135194\"},{\"showWorldLabel\":true,\"showLabel\":false,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093337-awXWK5QNJVSRO79ODv9J0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093338-ZJmCDxqXqJRliEZ7iYLD0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093334-trxP0cvjxzENCixgdGeY0-v4\"},\"worldLabel\":\"classic-world\",\"title\":\"\uD589\uBCF5\uD55C \uD06C\uB9AC\uC2A4\uB9C8\uC2A4 \uD30C\uD2F0\",\"description\":\"\uD06C\uB9AC\uC2A4\uB9C8\uC2A4\uB97C \uB9DE\uC774\uD558\uC5EC \uCC3E\uC544\uC628 \uCE94\uB514 \uCE5C\uAD6C\uB4E4!\",\"label\":\"\",\"link\":\"index.html\/\/aion.plaync.com\/board\/clsnotice\/view?articleId=50135198\",\"date\":\"2022. 12. 7.(\uC218) ~ 12. 28.(\uC218)\"},{\"showWorldLabel\":true,\"showLabel\":false,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093612-MAyiKBcGEWZVkpy5s84a0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093613-o2IYzMcW3k7YCSoP6OS80-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093615-wuibwoRD7We4di62vUaA0-v4\"},\"worldLabel\":\"live-world\",\"label\":\"\",\"title\":\"PICK! \uC131\uC7A5 \uD328\uD0A4\uC9C0\",\"description\":\"\uACBD\uD5D8\uCE58\uB3C4! \uC5B4\uBE44\uC2A4 \uD3EC\uC778\uB4DC\uD1A0! \uBBF8\uB2C8\uC628\uB3C4! \uC6D0\uD558\uB294 \uC131\uC7A5\uC744 PICK!\",\"date\":\"2022. 12. 7.(\uC218) ~ 12. 21.(\uC218)\",\"link\":\"https:\/\/aion.plaync.com\/board\/notice\/view?articleId=50135203\"},{\"showWorldLabel\":true,\"showLabel\":true,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093900-j05p9XKL6qkyIH0JOCBo0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093901-Zhewg1JO74VuQu43pKo90-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221207093908-T73biUFx9rnj5lZHTgJX0-v4\"},\"worldLabel\":\"live-world\",\"title\":\"\uACA8\uC6B8 \uC5EC\uC655, \uD574\uD53C\uC758 \uC120\uBB3C\",\"description\":\"\uAD81\uADF9 \uBCC0\uC2E0 \uACC4\uC57D\uC11C\uBD80\uD130 \uC0E4\uB974\uCF08 \uC0C1\uC790\uAE4C\uC9C0 \uD574\uD53C\uAC00 \uC900\uBE44\uD55C \uC120\uBB3C\uC744 \uD655\uC778\uD558\uC138\uC694.\",\"date\":\"2022. 12. 7.(\uC218) ~ 12. 28.(\uC218)\",\"link\":\"index.html\/\/aion.plaync.com\/board\/notice\/view?articleId=50135191\",\"label\":\"EVENT\"},{\"showWorldLabel\":true,\"showLabel\":false,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221130105905-kOiZj5MW1PKvXLTuD0rS0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221130105907-D02adlIkR2G0UDJhcKTr0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221130105904-CarYle4oj0Y5eV1AhPNb0-v4\"},\"worldLabel\":\"classic-world\",\"title\":\"\uC774\uBCA4\uD2B8 \uD328\uC2A4\",\"description\":\"\uC544\uD2B8\uB808\uC774\uC544\uB97C \uB354 \uD2B9\uBCC4\uD558\uAC8C \uC990\uAE30\uB294 \uBC29\uBC95!\",\"date\":\"2022. 11. 30.(\uC218) ~ 12. 28.(\uC218)\",\"link\":\"https:\/\/aion.plaync.com\/board\/clsnotice\/view?articleId=50127271\"},{\"showWorldLabel\":true,\"showLabel\":false,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221116091904-lOMQJwwsYDWrKFE8x1f40-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221116091910-bL29GXrZ5nHzkYlkZyyc0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221116091912-IQrqhUAzuixPgsQ17Awv0-v4\"},\"worldLabel\":\"classic-world\",\"title\":\"\uB9E4\uC77C\uB9E4\uC77C \uC120\uBB3C 90\uC77C \uC774\uC6A9\uAD8C\",\"description\":\"\uB9E4\uC77C\uB9E4\uC77C \uD589\uC6B4\uC758 \uC120\uBB3C\uC744 \uB4DC\uB824\uC694!\",\"date\":\"2022. 11. 16. (\uC218) ~ 12. 28(\uC218)\",\"link\":\"https:\/\/aion.plaync.com\/board\/clsnotice\/view?articleId=50106348\"},{\"showWorldLabel\":true,\"showLabel\":true,\"bg\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221109102241-rd2uYnJw1EgF9gxDlfRk0-v4\"},\"object\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221109102242-nYiF9xwsaEoMFbt2RwMf0-v4\"},\"thumbmail\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221109102244-ClQQ4TgWJ3bLiuoXpr630-v4\"},\"worldLabel\":\"classic-world\",\"label\":\"EVENT\",\"title\":\"\uB370\uBC14\uC758 \uBB34\uAE30\uACE0\",\"description\":\"\uCE58\uC5F4\uD558\uAC8C \uC2F8\uC6CC \uC804\uB9AC\uD488\uC744 \uD68D\uB4DD\uD558\uACE0 \uCD5C\uACE0\uC758 \uC9D1\uD589\uC790 \uBB34\uAE30 \uC678\uD615 \uB514\uC790\uC778\uC5D0 \uB3C4\uC804\uD558\uB77C!\",\"date\":\"2022. 11. 9. (\uC218) ~ 2023. 2. 1. (\uC218)\",\"link\":\"https:\/\/aion.plaync.com\/events\/2022\/221109_arsenal\"}]}");
+            if(bannerData.display) {
+                nc.aion.promotionBanner({
+                    wrap: $('.section_main_banner'),
+                    length: bannerData.groups.length
+                })
+            }
+            // 디데이 배너 d-day banner
+            var ddayData = JSON.parse("{\"img\":{\"src\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20200401172127-RI7FjT7TBB5Qy5uLVwmD0-v4\"},\"display\":false,\"dday\":20200408,\"bgColorR\":\"33\",\"bgColorG\":\"44\",\"bgColorB\":\"89\",\"text1\":\"\",\"text2\":\"\",\"link\":\"https:\/\/aion.plaync.com\/board\/notice\/view?articleId=911450\"}");
+            if(ddayData.display) {
+                nc.aion.ddayBanner({
+                    dday: ddayData.dday,
+                    domainApi: "https:\/\/api-aion.plaync.com" // API 도메인
+                });
+            }
+            // ingame 미노출 배너 Banner
+            if(true) {
+                // 전체화면 영상배너 Tool
+                var videoLayer = JSON.parse("{\"display\":false,\"youtubeId\":\"dAa5r4wotz4\"}");
+                if(videoLayer.display) {
+                    nc.aion.videoLayer({
+                        youtubeId: videoLayer.youtubeId
+                    });
+                }
+                // 전체화면 이미지배너 Tool
+                var imageLayer = JSON.parse("{\"displayWeb\":false,\"displayLauncher\":false,\"data\":{\"title\":{\"display\":true,\"text\":\"\uD5E8\uC81C\uB974\uC640 \uADF8\uB808\uD14C\uB974\uC758 \uBAA8\uD5D8\"},\"subtitle\":{\"display\":true,\"text\":\"\uC0AC\uC545\uD55C \uB9C8\uB140\uB97C \uBB3C\uB9AC\uCE58\uACE0 \uB9C8\uB140\uC758 \uBCF4\uBB3C\uB3C4 \uCC28\uC9C0\uD574\uBCF4\uC138\uC694!\"},\"date\":{\"display\":true,\"text\":\"4. 10.(\uC218) ~ 5. 2.(\uBAA9)\",\"color\":\"#ffffff\"},\"button\":{\"display\":true,\"backgroundColor\":\"#627d32\",\"text\":\"\uC774\uBCA4\uD2B8 \uBC14\uB85C\uAC00\uAE30\",\"link\":\"https:\/\/aion.plaync.com\/events\/2019\/190410_adventure\"},\"img\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20190411085651-PZmWNdekLsaukBhbeEmQ0-v4\"},\"cookie\":\"AO_adventure_0410\"}");
+                if(imageLayer.displayWeb && true) {
+                    nc.aion.imageLayer({
+                        data: imageLayer.data,
+                        cookie: imageLayer.cookie
+                    });
+                }
+                if(imageLayer.displayLauncher && false) {
+                    nc.aion.imageLayer({
+                        data: imageLayer.data,
+                        cookie: imageLayer.cookie
+                    });
+                }
+                // Server all lyar
+                var serverIntegration = JSON.parse("{\"display\":true,\"data\":{\"integration\":[{\"serverPrevious\":[{\"server\":\"\uCE74\uC774\uC2DC\uB12C\"},{\"server\":\"\uB8E8\uBBF8\uC5D8\"},{\"server\":\"\uC720\uC2A4\uD2F0\uC5D8\"},{\"server\":\"\uB9C8\uB974\uCFE0\uD0C4\"}],\"serverAfter\":\"\uC5D0\uB808\uC288\uB780\uD0C0\"},{\"serverPrevious\":[{\"server\":\"\uB4DC\uD0A4\"},{\"server\":\"\uB77C\uBBF8\"}],\"serverAfter\":\"\uC5B4\uBE44\uC2A4\"}],\"button\":[{\"text\":\"\uC5D0\uB808\uC288\uB780\uD0C0 \uC548\uB0B4 \uBCF4\uAE30\",\"link\":\"https:\/\/aion.plaync.com\/board\/clsnotice\/view?articleId=638d792c18accb386e35f4be\"},{\"text\":\"\uC5B4\uBE44\uC2A4 \uC548\uB0B4 \uBCF4\uAE30\",\"link\":\"https:\/\/aion.plaync.com\/board\/clsnotice\/view?articleId=63928aa3c1f56a7b82a1cf1a\"}],\"onlyDormant\":false,\"cookieDate\":0,\"cookieId\":\"server_221214\",\"date\":202212070000,\"img\":\"index.html\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20210203110341-a19EjLCyj5if2do75zIM0-v4\",\"character\":\"index.html\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20210203110350-a7ty4H4Jt2K4hS94nQhf0-v4\",\"title\":\"\uC0C8\uB85C\uC6B4 \uC11C\uBC84\uC5D0\uC11C \uB9CC\uB098\uC694!\",\"subtitle\":\"\uD074\uB798\uC2DD \uC11C\uBC84\uAC00 \uD1B5\uD569\uB418\uC5C8\uC2B5\uB2C8\uB2E4.<br>\uC0C8\uB86D\uAC8C \uB2E8\uC7A5\uD55C \uC11C\uBC84\uC5D0\uC11C \uB354 \uC990\uAC70\uC6B4 \uC544\uC774\uC628\uC744 \uACBD\uD5D8\uD558\uC138\uC694!\"}}");
+                if(serverIntegration.display) {
+                    nc.aion.serverIntegration({
+                        data: serverIntegration.data,
+                        domainApi: "https:\/\/api-aion.plaync.com" // 
+                    })
+                }
+            }
+        }(jQuery));
+    </script>
+    <!-- VAT Code -->
+    <script type="text/JavaScript">
+        var mezzo_landing;
+        userAgent = new String(navigator.userAgent);
+        if( (userAgent.search("iPhone") > -1) || (userAgent.search("iPad") > -1 || userAgent.search("Android") > -1)) {
+            mezzo_landing = "https://mobile.midas-i.com/roianal.mezzo/tracking?cmp_no=2028&amp;depth=1"; // mobile 태그
+        } else {
+            mezzo_landing = "https://vtag26.midas-i.com/vat-tag?cmp_no=3776&amp;depth=1"; //web 태그
+        }
+        img = new Image();
+        img.src = mezzo_landing;
+    </script>
+
+    <!-- 공통 배너 All lyaer -->
+    <script src="../assets.playnccdn.com/plaync/rwdcommon/js/nc.rwd.common9800.js?v=202212141055"></script>
+    <script>
+        $(function(){
+
+            var ncBannerData = JSON.parse("{\"showTopBanner\":false,\"showImageBanner\":false,\"showMovieBanner\":false,\"showFloatingBanner\":false,\"showToastBanner\":true,\"ddayShow\":false,\"ddayDate\":\"20210421\",\"topButtonShow\":false,\"topButtonLable\":\"\",\"topLable\":\"UPDATE\",\"topTitle\":\"\uC544\uD504\uC0AC\uB780\uD0C0 : \uC131\uC804\",\"topLink\":\"index.html\/\/aion.plaync.com\/update\/history\/2021\/210414_update\",\"topLinkNewWindow\":false,\"topLauncherShow\":true,\"movieCDN\":false,\"youtubeID\":\"pbq1i7Z32xI\",\"movieURL\":\"\",\"movieLauncherShow\":true,\"movieCookie\":\"ncBannerMovie20220727\",\"imageOrientationVertical\":true,\"imageLink\":\"index.html\/\/youtu.be\/Pt9rmV0A9L4\",\"imageLinkNewWindow\":false,\"imageLauncherShow\":true,\"imageCookie\":\"ncBannerImage20221206\",\"floatingTitle\":\"\",\"floatingLink\":\"\",\"floatingLinkNewWindow\":false,\"floatingLauncherShow\":true,\"floatingCookie\":\"floating20201218\",\"toastLable\":\"\uB77C\uC774\uBE0C\",\"toastTitle\":\"\uB77C\uC774\uBE0C \uB370\uBC14 \uD328\uC2A4\",\"toastSubTitle\":\"\uB370\uBC14\uC758 \uC544\uD2B8\uB808\uC774\uC544 \uAE38\uC7A1\uC774\",\"toastLink\":\"index.html\/\/aion.plaync.com\/board\/notice\/view?articleId=50143549\",\"toastLinkNewWindow\":false,\"toastLauncherShow\":true,\"toastCookie\":\"ncBannerToast20221217\",\"ip\":\"aion\",\"imageMobileBG\":\"index.html\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221206152311-nUL5JupLoNrqLO8Am1ky0-v4\",\"imagePcBG\":\"index.html\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221206152313-hlXpJcycIiLrzLOjdLkl0-v4\",\"toastBG\":\"https:\/\/imgfiles-cdn.plaync.com\/file\/contents\/download\/20221217014046-SpQ9KdIttBbMHfmJ8t0A0-v4\"}");
+            window.ncrwd = new nc.rwd.common({
+                wstatic:"https:\/\/assets.playnccdn.com",
+                isLogin: false,
+                ncBanner: ncBannerData
+            });
+        });
+    </script>
+                                 <!-- Footer Text --> 
+    	<footer class="footer-section">
+        <div class="container">
+          <ul class="footer-menu">
+            <li><a href="index.html">홈</a></li>
+            <li><a href="http://www.liongames.co.kr/Front/">라이언게임즈</a></li>
+            <li><a href="https://store.steampowered.com/app/1825750/Soulworker__Your_Destiny_Awaits/">스팀</a></li>
+            <li><a href="https://game.naver.com/lounge/soulworker/home">공식라운지</a></li>
+          </ul>
+          <p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script>저작권 |Copyright : 라이언 게임즈 | 홈페이지 개발 : 윤레이나ruy 상업용 목적으로 이용하지 않기로 약속하에 운영 됩니다.<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">윤레이나ruy</a>  
+    </p>
         </div>
+      </footer>
+	<script src="../assets.playnccdn.com/uikit/ncui/1.7.4/js/ncui-footer9800.js?v=202212141055"></script>
+	<script src="../assets.playnccdn.com/aion-web/v1/js/common/footer.config9800.js?v=202212141055"></script>
 
-    </section>
-    <script src="script.js"></script>  
-</body>
+	<script>
+		var dimensionValue = { platform : "pc", isLogin : false };
+	</script>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N52PXK5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB72J98" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
+</body> 
+
+<!-- Mirrored from aion.plaync.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 18 Dec 2022 10:01:13 GMT -->
 </html>
